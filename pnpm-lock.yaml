@@ -48,6 +48,9 @@ devDependencies:
   '@nrwl/workspace':
     specifier: 15.9.2
     version: 15.9.2
+  '@nx-go/nx-go':
+    specifier: ^2.7.0
+    version: 2.7.0
   '@pmmmwh/react-refresh-webpack-plugin':
     specifier: ^0.5.7
     version: 0.5.7(react-refresh@0.10.0)(webpack@5.80.0)
@@ -2453,6 +2456,12 @@ packages:
       - '@swc-node/register'
       - '@swc/core'
       - debug
+    dev: true
+
+  /@nx-go/nx-go@2.7.0:
+    resolution: {integrity: sha512-TtesqhhHKG8uIagqHpxNlNN0MLlT0klGY8rWl83CZ1UIaEmL/2GWZMW8aHh1e0uRxBqe1hM6XNECJFADmknGTQ==}
+    dependencies:
+      fs-extra: 9.1.0
     dev: true
 
   /@parcel/watcher@2.0.4:

@@ -1,15 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "horror-corp",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "OWRiYjNkNDgtOTUyZi00YTRjLWE0MzMtZmE3YzJjNGI1MGU0fHJlYWQtd3JpdGU="
-      }
-    }
+  "implicitDependencies": {
+    "go.mod": "*"
   },
+  "npmScope": "horror-corp",
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"]
@@ -23,6 +17,15 @@
     },
     "test": {
       "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "OWRiYjNkNDgtOTUyZi00YTRjLWE0MzMtZmE3YzJjNGI1MGU0fHJlYWQtd3JpdGU="
+      }
     }
   },
   "generators": {
