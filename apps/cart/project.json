@@ -51,7 +51,7 @@
       "options": {
         "buildTarget": "cart:build",
         "hmr": true,
-        "port": 4202
+        "port": 8082
       },
       "configurations": {
         "development": {
@@ -75,7 +75,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "cart:build",
-        "port": 4202
+        "port": 8082
       },
       "configurations": {
         "development": {
@@ -99,6 +99,14 @@
           "codeCoverage": true
         }
       }
+    },
+    "build-docker": {
+      "dependsOn": ["build"],
+      "command": "docker build -f apps/cart/Dockerfile . -t horror-corp-cart"
+    },
+    "run-docker": {
+      "dependsOn": ["build-docker"],
+      "command": "docker run -p 8082:80 horror-corp-cart"
     }
   },
   "tags": []

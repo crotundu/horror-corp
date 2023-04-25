@@ -51,7 +51,7 @@
       "options": {
         "buildTarget": "shell:build",
         "hmr": true,
-        "port": 4200
+        "port": 8080
       },
       "configurations": {
         "development": {
@@ -75,7 +75,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "shell:build",
-        "port": 4200
+        "port": 8080
       },
       "configurations": {
         "development": {
@@ -99,6 +99,14 @@
           "codeCoverage": true
         }
       }
+    },
+    "build-docker": {
+      "dependsOn": ["build"],
+      "command": "docker build -f apps/shell/Dockerfile . -t horror-corp-shell"
+    },
+    "run-docker": {
+      "dependsOn": ["build-docker"],
+      "command": "docker run -p 8080:80 horror-corp-shell"
     }
   },
   "tags": []

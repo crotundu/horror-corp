@@ -51,7 +51,7 @@
       "options": {
         "buildTarget": "shop:build",
         "hmr": true,
-        "port": 4201
+        "port": 8081
       },
       "configurations": {
         "development": {
@@ -75,7 +75,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "shop:build",
-        "port": 4201
+        "port": 8081
       },
       "configurations": {
         "development": {
@@ -99,6 +99,14 @@
           "codeCoverage": true
         }
       }
+    },
+    "build-docker": {
+      "dependsOn": ["build"],
+      "command": "docker build -f apps/shop/Dockerfile . -t horror-corp-shop"
+    },
+    "run-docker": {
+      "dependsOn": ["build-docker"],
+      "command": "docker run -p 8081:80 horror-corp-shop"
     }
   },
   "tags": []

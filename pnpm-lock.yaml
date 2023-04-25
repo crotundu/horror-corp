@@ -33,6 +33,9 @@ devDependencies:
   '@nrwl/linter':
     specifier: 15.9.2
     version: 15.9.2(eslint@8.15.0)(nx@15.9.2)(typescript@4.9.5)
+  '@nrwl/node':
+    specifier: ^15.9.2
+    version: 15.9.2(@babel/core@7.21.4)(@types/node@18.14.2)(eslint@8.15.0)(nx@15.9.2)(ts-node@10.9.1)(typescript@4.9.5)
   '@nrwl/nx-cloud':
     specifier: latest
     version: 16.0.1
@@ -2213,6 +2216,45 @@ packages:
       - nx
       - supports-color
       - typescript
+    dev: true
+
+  /@nrwl/node@15.9.2(@babel/core@7.21.4)(@types/node@18.14.2)(eslint@8.15.0)(nx@15.9.2)(ts-node@10.9.1)(typescript@4.9.5):
+    resolution: {integrity: sha512-PYxtRiZIrtkvz2d/QtSgY0953n5I+ZFEOMWFAZ8ntnydvpKs4jTved2pIpMCk4AadRKk/AJgJg9pwDK539XELw==}
+    dependencies:
+      '@nrwl/devkit': 15.9.2(nx@15.9.2)
+      '@nrwl/jest': 15.9.2(@types/node@18.14.2)(nx@15.9.2)(ts-node@10.9.1)(typescript@4.9.5)
+      '@nrwl/js': 15.9.2(nx@15.9.2)(typescript@4.9.5)
+      '@nrwl/linter': 15.9.2(eslint@8.15.0)(nx@15.9.2)(typescript@4.9.5)
+      '@nrwl/webpack': 15.9.2(@babel/core@7.21.4)(@types/node@18.14.2)(nx@15.9.2)(typescript@4.9.5)
+      '@nrwl/workspace': 15.9.2
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@babel/traverse'
+      - '@parcel/css'
+      - '@swc-node/register'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - bufferutil
+      - clean-css
+      - csso
+      - debug
+      - esbuild
+      - eslint
+      - fibers
+      - html-webpack-plugin
+      - node-notifier
+      - node-sass
+      - nx
+      - sass-embedded
+      - supports-color
+      - ts-node
+      - typescript
+      - uglify-js
+      - utf-8-validate
+      - vue-template-compiler
+      - webpack-cli
     dev: true
 
   /@nrwl/nx-cloud@16.0.1:

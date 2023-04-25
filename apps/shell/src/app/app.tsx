@@ -6,8 +6,6 @@ const Shop = React.lazy(() => import("shop/Module"));
 
 const Cart = React.lazy(() => import("cart/Module"));
 
-const About = React.lazy(() => import("about/Module"));
-
 export function App() {
   return (
     <React.Suspense fallback={null}>
@@ -23,10 +21,6 @@ export function App() {
         <li>
           <Link to="/cart">Cart</Link>
         </li>
-
-        <li>
-          <Link to="/about">About</Link>
-        </li>
       </ul>
       <Routes>
         <Route path="/" element={<h1>Welcome to Shell</h1>} />
@@ -34,8 +28,6 @@ export function App() {
         <Route path="/shop" element={<Shop />} />
 
         <Route path="/cart" element={<Cart />} />
-
-        <Route path="/about" element={<About />} />
       </Routes>
     </React.Suspense>
   );
