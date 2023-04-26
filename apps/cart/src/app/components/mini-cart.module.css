@@ -1,0 +1,10 @@
+.container {
+    border: 1px solid black;
+}
+.red {
+    border-color: red;
+}
+
+.thick {
+    border-width: 5px;
+}

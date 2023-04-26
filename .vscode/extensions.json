@@ -1,8 +1,12 @@
 {
   "recommendations": [
-    "nrwl.angular-console",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "firsttris.vscode-jest-runner"
+    "firsttris.vscode-jest-runner",
+    "clinyong.vscode-css-modules",
+    "naumovs.color-highlight",
+    "ms-azuretools.vscode-docker",
+    "eamodio.gitlens",
+    "nrwl.angular-console"
   ]
 }

@@ -5,5 +5,6 @@ module.exports = {
   name: "cart",
   exposes: {
     "./Module": "./src/remote-entry.ts",
+    "./MiniCart": "./src/app/components/mini-cart.tsx"
   },
 };

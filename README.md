@@ -10,6 +10,13 @@ A playground for an Nx, React, Module Federation Microfrontends project. I know,
 
 Run `nx graph` to see a diagram of the dependencies of the projects.
 
+## Running
+
+Serving **shell** in development mode and the remotes in static mode.
+`nx serve shell --open`
+
+To run one or more remotes in development mode, use the `--devRemotes` option.
+`nx serve shell --open --devRemotes=cart,shop`
 ## Remote caching
 
 Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and make CI faster.

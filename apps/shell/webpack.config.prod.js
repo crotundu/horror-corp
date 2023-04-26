@@ -24,8 +24,8 @@ const prodConfig = {
    * ]
    */
   remotes: [
-    ["shop", "http://localhost:8081/"],
-    ["cart", "http://localhost:8082/"]
+    ["shop", "http://127.0.0.1:8081/"],
+    ["cart", "http://127.0.0.1:8082/"]
   ],
 };
 
