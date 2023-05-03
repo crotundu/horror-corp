@@ -16,6 +16,11 @@ func main() {
 			"message": "ok",
 		})
 	})
+	// generate api route called /shop that serves a local json file
+	router.GET("/shop", func(ctx *gin.Context) {
+		ctx.Header("Access-Control-Allow-Origin", "*");
+		ctx.File("./shop.json")
+	})
 
 	port := os.Getenv("PORT")
 	if port == "" {

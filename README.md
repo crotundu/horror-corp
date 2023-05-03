@@ -24,3 +24,8 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+
+## Dev notes
+Run `nx g @nx-go/nx-go:app api2 --useGoWork` to create a new Go app. The `--useGoWork` will create a **go.work** workspace file that allows maintaining multiple
+go.mod files (per app).

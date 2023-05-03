@@ -7,7 +7,7 @@
     "build": {
       "executor": "@nx-go/nx-go:build",
       "options": {
-        "outputPath": "dist/apps/api",
+        "outputPath": "dist/apps/api/api",
         "main": "apps/api/main.go"
       }
     },
@@ -16,6 +16,14 @@
       "options": {
         "main": "apps/api/main.go"
       }
+    },
+    "build-docker": {
+      "dependsOn": ["build"],
+      "command": "docker build -f apps/api/Dockerfile . -t horror-corp-api"
+    },
+    "run-docker": {
+      "dependsOn": ["build-docker"],
+      "command": "docker run -p 8080:80 horror-corp-api"
     },
     "test": {
       "executor": "@nx-go/nx-go:test"

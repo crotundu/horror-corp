@@ -3,9 +3,9 @@ FROM golang:1.17-alpine as backend-builder
 WORKDIR /app
 ENV PORT=8888
 RUN apk --no-cache add git
-COPY ./go.mod ./go.sum ./
+COPY apps/api/go.mod apps/api/go.sum ./
 RUN go mod download
-COPY ./* ./
+COPY apps/api/* ./
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o api .
 
 FROM alpine:latest
