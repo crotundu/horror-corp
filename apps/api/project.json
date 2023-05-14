@@ -23,7 +23,7 @@
     },
     "run-docker": {
       "dependsOn": ["build-docker"],
-      "command": "docker run -p 8080:80 horror-corp-api"
+      "command": "docker run -p 8888:8888 horror-corp-api"
     },
     "test": {
       "executor": "@nx-go/nx-go:test"

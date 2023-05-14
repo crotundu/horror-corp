@@ -1,8 +1,8 @@
-const { composePlugins, withNx } = require("@nrwl/webpack");
-const { withReact } = require("@nrwl/react");
-const { withModuleFederation } = require("@nrwl/react/module-federation");
+const { composePlugins, withNx } = require('@nx/webpack');
+const { withReact } = require('@nx/react');
+const { withModuleFederation } = require('@nx/react/module-federation');
 
-const baseConfig = require("./module-federation.config");
+const baseConfig = require('./module-federation.config');
 
 const prodConfig = {
   ...baseConfig,
@@ -24,8 +24,8 @@ const prodConfig = {
    * ]
    */
   remotes: [
-    ["shop", "http://127.0.0.1:8081/"],
-    ["cart", "http://127.0.0.1:8082/"]
+    ['shop', 'http://127.0.0.1:8081/'],
+    ['cart', 'http://127.0.0.1:8082/'],
   ],
 };
 

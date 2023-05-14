@@ -1,13 +1,13 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from 'react-router-dom';
 
-const Shop = React.lazy(() => import("shop/Module"));
-const Cart = React.lazy(() => import("cart/Module"));
+const Shop = React.lazy(() => import('shop/Module'));
+const Cart = React.lazy(() => import('cart/Module'));
 
-const MiniCart = React.lazy(() => import("cart/MiniCart"));
+//const MiniCart = React.lazy(() => import("cart/MiniCart"));
 
-//const MiniCart = () => <div>Fake Mini</div>;
+const MiniCart = () => <div>Fake Mini</div>;
 
 export function App() {
   return (
@@ -26,12 +26,15 @@ export function App() {
         </li>
       </ul>
       <Routes>
-        <Route path="/" element={
-        <>
-          <h1>Welcome to your Shell!</h1>
-          <MiniCart />
-        </>
-        } />
+        <Route
+          path="/"
+          element={
+            <>
+              <h1>Welcome to your Shell!</h1>
+              <MiniCart />
+            </>
+          }
+        />
 
         <Route path="/shop" element={<Shop />} />
 

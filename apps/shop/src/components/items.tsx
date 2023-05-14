@@ -1,7 +1,13 @@
+import { getShopItems } from '../api/getShopItems';
+import { useQuery } from 'react-query';
+
 export const Items = () => {
+  const query = useQuery('shopItems', getShopItems);
   return (
     <div>
-      <h1>Welcome to Items!</h1>
+      {query.data?.map((item) => (
+        <div>{item.characterName}</div>
+      ))}
     </div>
   );
 };

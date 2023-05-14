@@ -1,0 +1,54 @@
+version: '3.7'
+services:
+  api:
+    container_name: horror-corp-api
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+    environment:
+      - PORT=8888
+    ports:
+      - '8888:8888'
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://api:8888/health || exit 1
+      interval: 60s
+      retries: 5
+      start_period: 20s
+      timeout: 10s
+  shell:
+    container_name: horror-corp-shell
+    environment:
+      - API_URL=http://api:8888
+    build:
+      context: ./apps/shell
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    ports:
+      - '8080:80'
+  shop:
+    container_name: horror-corp-shop
+    environment:
+      - API_URL=http://api:8888
+    build:
+      context: ./apps/shop
+      dockerfile: Dockerfile
+    depends_on:
+      - shell
+    ports:
+      - '8081:80'
+  cart:
+    container_name: horror-corp-cart
+    environment:
+      - API_URL=http://api:8888
+    build:
+      context: ./apps/cart
+      dockerfile: Dockerfile
+    depends_on:
+      - shell
+    ports:
+      - '8082:80'
+
+networks:
+  default:
+    name: horror-corp-network

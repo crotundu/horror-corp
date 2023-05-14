@@ -17,6 +17,13 @@ Serving **shell** in development mode and the remotes in static mode.
 
 To run one or more remotes in development mode, use the `--devRemotes` option.
 `nx serve shell --open --devRemotes=cart,shop`
+
+To run the production build (containers):
+`nx run-many -t run-docker`
+
+To check what is affected by current change:
+`nx affected:graph`
+
 ## Remote caching
 
 Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and make CI faster.
@@ -25,7 +32,7 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
-
 ## Dev notes
-Run `nx g @nx-go/nx-go:app api2 --useGoWork` to create a new Go app. The `--useGoWork` will create a **go.work** workspace file that allows maintaining multiple
+
+Run `nx g @nx-go/nx-go:app api --useGoWork` to create a new Go app. The `--useGoWork` will create a **go.work** workspace file that allows maintaining multiple
 go.mod files (per app).

@@ -11,7 +11,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o api .
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /app
-COPY --from=backend-builder /app/api ./
+COPY --from=backend-builder /app/api /app/shop.json ./
 EXPOSE ${PORT}
-HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT}/health || exit 1
 CMD ["./api"]
