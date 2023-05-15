@@ -2,9 +2,8 @@ const baseConfig = require('../../module-federation-base.config');
 
 module.exports = {
   ...baseConfig,
-  name: "cart",
+  name: 'cart',
   exposes: {
-    "./Module": "./src/remote-entry.ts",
-    "./MiniCart": "./src/app/components/mini-cart.tsx"
+    './Module': './src/remote-entry.ts',
   },
 };

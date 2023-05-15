@@ -6,7 +6,15 @@
   "private": true,
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
-    "@nx/webpack": "16.1.4",
+    "@nrwl/cypress": "16.1.4",
+    "@nrwl/eslint-plugin-nx": "16.1.4",
+    "@nrwl/jest": "16.1.4",
+    "@nrwl/js": "16.1.4",
+    "@nrwl/linter": "16.1.4",
+    "@nrwl/node": "16.1.4",
+    "@nrwl/react": "16.1.4",
+    "@nrwl/web": "16.1.4",
+    "@nrwl/webpack": "16.1.4",
     "@nx-go/nx-go": "^2.7.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@svgr/webpack": "^6.1.2",
@@ -38,15 +46,7 @@
     "typescript": "5.0.4",
     "url-loader": "^4.1.1",
     "nx-cloud": "16.0.5",
-    "@nx/workspace": "16.1.4",
-    "@nx/cypress": "16.1.4",
-    "@nx/linter": "16.1.4",
-    "@nx/js": "16.1.4",
-    "@nx/eslint-plugin": "16.1.4",
-    "@nx/web": "16.1.4",
-    "@nx/react": "16.1.4",
-    "@nx/node": "16.1.4",
-    "@nx/jest": "16.1.4"
+    "@nx/workspace": "16.1.4"
   },
   "dependencies": {
     "classnames": "2.3.2",

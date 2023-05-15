@@ -1,7 +1,6 @@
 import { ErrorBoundary } from 'react-error-boundary';
 import { Items } from '../components/items';
 import { QueryClientProvider } from 'react-query';
-import { SillyComponent } from '@horror-corp/cart';
 import { Suspense } from 'react';
 import { queryClient } from '../api/react-query';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -15,7 +14,6 @@ export function App() {
         <div>Items:</div>
         <Suspense fallback={<div>No items available</div>}>
           <Items />
-          <SillyComponent />
         </Suspense>
       </ErrorBoundary>
     </QueryClientProvider>
