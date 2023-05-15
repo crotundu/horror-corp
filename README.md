@@ -10,6 +10,14 @@ A playground for an Nx, React, Module Federation Microfrontends project. I know,
 
 Run `nx graph` to see a diagram of the dependencies of the projects.
 
+## Developing
+
+Create a new library (it places **ui** folder inside the **lib/shell** folder. **lib** is a predefined location for libraries). A new project called **shell-ui** will result from this.
+`nx g @nx/react:library ui --directory=shell --component=false`
+
+Create a new component in the above created library project:
+`nx g component header --project=shell-ui`
+
 ## Running
 
 Serving **shell** in development mode and the remotes in static mode.

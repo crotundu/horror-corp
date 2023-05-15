@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@horror-corp/cart": ["apps/cart/src"]
+      "@horror-corp/cart": ["apps/cart/src"],
+      "@horror-corp/shell/ui": ["libs/shell/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

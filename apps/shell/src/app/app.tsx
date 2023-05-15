@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+
+import { Header } from 'libs/shell/ui/src';
 
 const Shop = React.lazy(() => import('shop/Module'));
 const Cart = React.lazy(() => import('cart/Module'));
@@ -8,19 +10,7 @@ const Cart = React.lazy(() => import('cart/Module'));
 export function App() {
   return (
     <React.Suspense fallback={null}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-
-        <li>
-          <Link to="/shop">Shop</Link>
-        </li>
-
-        <li>
-          <Link to="/cart">Cart</Link>
-        </li>
-      </ul>
+      <Header />
       <Routes>
         <Route
           path="/"
