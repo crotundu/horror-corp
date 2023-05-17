@@ -16,7 +16,7 @@
         "main": "apps/shop/src/main.ts",
         "tsConfig": "apps/shop/tsconfig.app.json",
         "assets": ["apps/shop/src/favicon.ico", "apps/shop/src/assets"],
-        "styles": ["apps/shop/src/styles.css"],
+        "styles": ["/global.css", "apps/shop/src/styles.css"],
         "scripts": [],
         "isolatedConfig": true,
         "webpackConfig": "apps/shop/webpack.config.js"
@@ -51,7 +51,8 @@
       "options": {
         "buildTarget": "shop:build",
         "hmr": true,
-        "port": 8081
+        "port": 8081,
+        "host": "127.0.0.1"
       },
       "configurations": {
         "development": {
@@ -75,7 +76,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "shop:build",
-        "port": 8081
+        "port": 8081,
+        "host": "127.0.0.1"
       },
       "configurations": {
         "development": {

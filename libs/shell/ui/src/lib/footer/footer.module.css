@@ -1,0 +1,14 @@
+.container {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1024px;
+  margin: 24px auto;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+
+.link {
+  color: white;
+}

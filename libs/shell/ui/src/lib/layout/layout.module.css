@@ -1,0 +1,6 @@
+.container {
+  background-color: var(--color-bg-2);
+  padding: 24px;
+  max-width: 1024px;
+  margin: 0 auto;
+}

@@ -1,7 +1,24 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.container {
+  background-color: var(--color-bg-2);
+  display: flex;
+  justify-content: space-around;
+  max-width: 1024px;
+  font-weight: bold;
+  margin: 24px auto;
+  padding: 16px 0;
+  height: 48px;
+}
+
+.link {
+  font-size: 1.8rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.link.active {
+  color: var(--color-secondary);
+}
+
+.link:hover {
+  color: var(--color-secondary);
+}

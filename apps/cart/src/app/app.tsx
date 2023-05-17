@@ -1,8 +1,9 @@
+import { CartItems } from '@horror-corp/cart/feature';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.css';
 
 export function App() {
-  return <h1>Welcome to Cart!!!!!!!</h1>;
+  return <CartItems></CartItems>;
 }
 
 export default App;

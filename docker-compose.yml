@@ -18,7 +18,7 @@ services:
   shell:
     container_name: horror-corp-shell
     environment:
-      - API_URL=http://api:8888
+      - NX_API_URL=http://api:8888
     build:
       context: ./apps/shell
       dockerfile: Dockerfile
@@ -29,7 +29,7 @@ services:
   shop:
     container_name: horror-corp-shop
     environment:
-      - API_URL=http://api:8888
+      - NX_API_URL=http://api:8888
     build:
       context: ./apps/shop
       dockerfile: Dockerfile
@@ -40,7 +40,7 @@ services:
   cart:
     container_name: horror-corp-cart
     environment:
-      - API_URL=http://api:8888
+      - NX_API_URL=http://api:8888
     build:
       context: ./apps/cart
       dockerfile: Dockerfile

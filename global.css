@@ -1,0 +1,37 @@
+:root {
+  --color-accent: #ffff00;
+  --color-secondary: #ff0000;
+  --color-tertiary: #333;
+  --color-black: #000;
+  --color-text: #ccc;
+  --color-bg: #000;
+  --color-bg-2: #111;
+  --accent-gradient: linear-gradient(
+    45deg,
+    var(--color-accent),
+    var(--color-secondary),
+    var(--color-black) 50%
+  );
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.text-gradient {
+  background: var(--accent-gradient);
+  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,78 @@
+.container {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  color: var(--color-text);
+  background-color: var(--color-bg-2);
+  background-image: var(--accent-gradient);
+  background-size: 400%;
+  border-radius: 16px;
+  border: 2px solid var(--color-tertiary);
+  background-position: 100%;
+  transition: background-position 0.6s;
+}
+
+.container.disabled {
+  opacity: 0.1;
+}
+
+.container:hover:has(button:not(:disabled)) {
+  cursor: pointer;
+  background-position: 0;
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+}
+
+.title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+}
+
+.image {
+  border: 2px solid var(--color-tertiary);
+  object-fit: cover;
+  object-position: top;
+}
+
+.description {
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+button {
+  position: absolute;
+  font-size: 48px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 16px;
+  background-color: transparent;
+  color: var(--color-accent);
+}
+button img {
+  background-color: white;
+}
+.container.disabled button {
+  visibility: visible;
+}
+.container:hover button:not(:disabled) {
+  visibility: visible;
+}
+.container button:not(:disabled) {
+  visibility: hidden;
+}

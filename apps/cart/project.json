@@ -16,7 +16,7 @@
         "main": "apps/cart/src/main.ts",
         "tsConfig": "apps/cart/tsconfig.app.json",
         "assets": ["apps/cart/src/favicon.ico", "apps/cart/src/assets"],
-        "styles": ["apps/cart/src/styles.css"],
+        "styles": ["/global.css", "apps/cart/src/styles.css"],
         "scripts": [],
         "isolatedConfig": true,
         "webpackConfig": "apps/cart/webpack.config.js"
@@ -51,7 +51,8 @@
       "options": {
         "buildTarget": "cart:build",
         "hmr": true,
-        "port": 8082
+        "port": 8082,
+        "host": "127.0.0.1"
       },
       "configurations": {
         "development": {
@@ -75,7 +76,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "cart:build",
-        "port": 8082
+        "port": 8082,
+        "host": "127.0.0.1"
       },
       "configurations": {
         "development": {

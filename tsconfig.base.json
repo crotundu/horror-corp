@@ -16,7 +16,14 @@
     "baseUrl": ".",
     "paths": {
       "@horror-corp/cart": ["apps/cart/src"],
-      "@horror-corp/shell/ui": ["libs/shell/ui/src/index.ts"]
+      "@horror-corp/cart/feature": ["libs/cart/feature/src/index.ts"],
+      "@horror-corp/shared/data-access": [
+        "libs/shared/data-access/src/index.ts"
+      ],
+      "@horror-corp/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@horror-corp/shell/ui": ["libs/shell/ui/src/index.ts"],
+      "@horror-corp/shop/data-access": ["libs/shop/data-access/src/index.ts"],
+      "@horror-corp/shop/feature": ["libs/shop/feature/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

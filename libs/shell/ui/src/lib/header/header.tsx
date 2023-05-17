@@ -1,28 +1,40 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './header.module.css';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
 
-export function Header(props: HeaderProps) {
+export const Header = (props: HeaderProps) => {
+  const path = window.location.pathname;
+  console.log(path);
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to Header!</h1>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
+    <header className={styles.container}>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isActive ? `${styles.link} ${styles.active}` : `${styles.link}`
+        }
+        to="/"
+      >
+        <span>Home</span>
+      </NavLink>
 
-        <li>
-          <Link to="/shop">Shop</Link>
-        </li>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isActive ? `${styles.link} ${styles.active}` : `${styles.link}`
+        }
+        to="/shop"
+      >
+        Shop
+      </NavLink>
 
-        <li>
-          <Link to="/cart">Cart</Link>
-        </li>
-      </ul>
-    </div>
+      <NavLink
+        className={({ isActive, isPending }) =>
+          isActive ? `${styles.link} ${styles.active}` : `${styles.link}`
+        }
+        to="/cart"
+      >
+        Cart
+      </NavLink>
+    </header>
   );
-}
-
-export default Header;
+};

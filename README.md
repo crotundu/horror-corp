@@ -27,7 +27,7 @@ To run one or more remotes in development mode, use the `--devRemotes` option.
 `nx serve shell --open --devRemotes=cart,shop`
 
 To run the production build (containers):
-`nx run-many -t run-docker`
+`nx run-many -t build-docker` followed by `docker-compose up`, in the workspace root.
 
 To check what is affected by current change:
 `nx affected:graph`

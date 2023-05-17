@@ -16,7 +16,7 @@
         "main": "apps/shell/src/main.ts",
         "tsConfig": "apps/shell/tsconfig.app.json",
         "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
-        "styles": ["apps/shell/src/styles.css"],
+        "styles": ["/global.css", "apps/shell/src/styles.css"],
         "scripts": [],
         "isolatedConfig": true,
         "webpackConfig": "apps/shell/webpack.config.js"
@@ -51,7 +51,8 @@
       "options": {
         "buildTarget": "shell:build",
         "hmr": true,
-        "port": 8080
+        "port": 8080,
+        "host": "127.0.0.1"
       },
       "configurations": {
         "development": {
@@ -75,7 +76,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "shell:build",
-        "port": 8080
+        "port": 8080,
+        "host": "127.0.0.1"
       },
       "configurations": {
         "development": {
