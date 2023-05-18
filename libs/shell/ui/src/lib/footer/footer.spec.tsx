@@ -1,9 +1,14 @@
-import Footer from './footer';
+import { Footer } from './footer';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
 
-describe('Header', () => {
+describe('Footer', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Footer />);
+    const { baseElement } = render(
+      <Router>
+        <Footer />
+      </Router>
+    );
     expect(baseElement).toBeTruthy();
   });
 });

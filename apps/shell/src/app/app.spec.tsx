@@ -1,9 +1,9 @@
-import App from "./app";
-import { BrowserRouter } from "react-router-dom";
-import { render } from "@testing-library/react";
+import App from './app';
+import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
 
-describe("App", () => {
-  it("should render successfully", () => {
+describe('App', () => {
+  it('should render successfully', () => {
     const { baseElement } = render(
       <BrowserRouter>
         <App />
@@ -12,12 +12,12 @@ describe("App", () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it("should have a greeting as the title", () => {
+  it('should have a greeting as the title', () => {
     const { getByText } = render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
     );
-    expect(getByText(/Welcome to Shell/gi)).toBeTruthy();
+    expect(getByText(/Shop of Horrors/gi)).toBeTruthy();
   });
 });

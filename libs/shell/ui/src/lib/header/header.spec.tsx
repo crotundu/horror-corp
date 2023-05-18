@@ -1,10 +1,14 @@
+import { Header } from './header';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
-
-import Header from './header';
 
 describe('Header', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Header />);
+    const { baseElement } = render(
+      <Router>
+        <Header />
+      </Router>
+    );
     expect(baseElement).toBeTruthy();
   });
 });

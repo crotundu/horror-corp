@@ -5,8 +5,6 @@ import styles from './header.module.css';
 export interface HeaderProps {}
 
 export const Header = (props: HeaderProps) => {
-  const path = window.location.pathname;
-  console.log(path);
   return (
     <header className={styles.container}>
       <NavLink
