@@ -3,7 +3,7 @@ import { CartItems } from '@horror-corp/cart/feature';
 import styles from './app.module.css';
 
 export function App() {
-  return <CartItems></CartItems>;
+  return <CartItems />;
 }
 
 export default App;
