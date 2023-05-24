@@ -15,25 +15,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out code
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: nrwl/nx-set-shas@v3
-      - uses: pnpm/action-setup@v2
+      - name: Sets up NX business
+        uses: nrwl/nx-set-shas@v3
+      - name: Sets up PNPM and installs dependencies
+        uses: pnpm/action-setup@v2
         with:
           version: 8
           run_install: |
             - recursive: true
               args: [--frozen-lockfile, --strict-peer-dependencies]
-      - name: configure aws credentials
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           role-to-assume: arn:aws:iam::210042418509:role/GitHubAction-AssumeRoleWithAction
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
       # Hello from AWS: WhoAmI
-      - name: Sts GetCallerIdentity
+      - name: Hello from AWS. STS GetCallerIdentity
         run: |
           aws sts get-caller-identity
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
       - name: Push the Docker images
         run: pnpx nx run-many -t push-docker-aws --parallel=3
