@@ -109,6 +109,14 @@
     "run-docker": {
       "dependsOn": ["build-docker"],
       "command": "docker run -p 8082:80 horror-corp-cart"
+    },
+    "tag-docker-aws": {
+      "dependsOn": ["build-docker"],
+      "command": "docker tag horror-corp-cart:latest 210042418509.dkr.ecr.eu-central-1.amazonaws.com/horror-corp-cart:latest"
+    },
+    "push-docker-aws": {
+      "dependsOn": ["tag-docker-aws"],
+      "command": "docker push 210042418509.dkr.ecr.eu-central-1.amazonaws.com/horror-corp-cart:latest"
     }
   },
   "tags": []

@@ -25,6 +25,14 @@
       "dependsOn": ["build-docker"],
       "command": "docker run -p 8888:8888 horror-corp-api"
     },
+    "tag-docker-aws": {
+      "dependsOn": ["build-docker"],
+      "command": "docker tag horror-corp-api:latest 210042418509.dkr.ecr.eu-central-1.amazonaws.com/horror-corp-api:latest"
+    },
+    "push-docker-aws": {
+      "dependsOn": ["tag-docker-aws"],
+      "command": "docker push 210042418509.dkr.ecr.eu-central-1.amazonaws.com/horror-corp-api:latest"
+    },
     "test": {
       "executor": "@nx-go/nx-go:test"
     },
